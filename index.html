@@ -1,24 +1,32 @@
-<!DOCTYPE html>
 <html>
-	<head>
-		<title>Frigorio</title>
-		<script>
-			function getRandom(){
-				var text = "#";
-				var caracters = 'ABCDEF0123456789';
-				
-				for ( i = 0; i <= 5; i++ ) {
-					var position = Math.floor(Math.random() * 16)
-					text += caracters[position];
-				}
-  			
-			
-				return console.log(text);
-			}
-			
-			getRandom();
-		</script>
-	</head>
-	<body bgcolor="">
-	</body>
+    <head>
+        <meta charset="utf-8">
+        <title> Labirinto </title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <h1 id="title" class="title"> MAZE GAME </h1>
+
+        <p id="titleInstru" class="title"> Instruções </p>
+            <p id="instru" class="text">
+                O jogo consiste em levar o quadradinho branco do canto superior esquerdo ao canto inferior direito.
+                Quando você clicar em "Play", o labirinto será gerado e o jogo se iniciará logo após.
+                Use as setas do teclado para se movimentar.
+            </p>
+            <p>
+                <span class="text"> Escolha o tamanho do labirinto que deseja jogar </span> <br />
+                <select id="size">
+                    <option value="15">Pequeno (15x15)</option>
+                    <option value="20">Médio (20x20)</option>
+                    <option value="25">Grande (25x25)</option>
+                </select>
+            </p>
+                <span class="text">
+                 SE DIVIRTA! ;)
+                </span>
+            <p>
+                <a href="./MazeGame/maze.html" onclick="play()"  class="button">Play</a>   
+            </p>
+        <script type="text/javascript" src="./script.js"></script>
+    </body>
 </html>
