@@ -2,23 +2,29 @@
 <html>
 	<head>
 		<title>Frigorio</title>
-		<script>
-			function getRandom(){
-				var text = "#";
-				var caracters = 'ABCDEF0123456789';
-				
-				for ( i = 0; i <= 5; i++ ) {
-					var position = Math.floor(Math.random() * 16)
-					text += caracters[position];
-				}
-  			
-			
-				return console.log(text);
-			}
-			
-			getRandom();
-		</script>
 	</head>
-	<body bgcolor="">
+	<body id="xxx">
 	</body>
 </html>
+<script>
+	function getRandom(){
+		var text = "#";
+		var caracters = 'ABCDEF0123456789';
+		
+		for ( i = 0; i <= 5; i++ ) {
+			var position = Math.floor(Math.random() * 16)
+			text += caracters[position];
+		}
+
+		return text;
+
+	}
+
+	var color = getRandom();
+
+	console.log(color);
+
+	document.getElementById('xxx').setAttribute('bgcolor', color)
+
+	location.reload();
+</script>
